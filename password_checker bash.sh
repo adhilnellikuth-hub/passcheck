@@ -247,12 +247,8 @@ while true; do
 
   analyze "$pwd"
 
-  echo -ne "  ${DIM}Save to log? (y/n): ${RESET}"
-  read -r save_choice
-  if [[ "$save_choice" =~ ^[Yy]$ ]]; then
-    save_log "$_LAST_PWD" "$_LAST_LABEL" "$_LAST_CRACK" \
-             "$_LAST_ENTROPY" "$_LAST_LENGTH" "$_LAST_CHARSET" "$_LAST_UNIQUE"
-  fi
+  save_log "$_LAST_PWD" "$_LAST_LABEL" "$_LAST_CRACK" \
+           "$_LAST_ENTROPY" "$_LAST_LENGTH" "$_LAST_CHARSET" "$_LAST_UNIQUE"
 
   echo -ne "  ${DIM}Press Enter to check another...${RESET}"
   read -r
